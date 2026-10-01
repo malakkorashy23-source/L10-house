@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L10N House</title>
+    <link rel="icon" href="./images/logo.png">
+
+    <!-- social media -->
+
+    <meta property="og:title" content="L10N House">
+    <meta property="og:description"
+        content="A simple interactive exercise built using HTML, CSS, API, and JavaScript. It focuses on creating a clean and responsive interface while using JavaScript to handle user interactions and dynamic functionality.">
+    <meta property="og:url" content="https://malakkorashy23-source.github.io/l10n-house/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="L10N House">
+
+    <!-- link of icons -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+    <!-- link of animation.css -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+
+    <!--____________________________________ links of css plugins files ____________________________________-->
+
+    <link rel="stylesheet" href="./plugins/animate_text/style.css">
+    <link rel="stylesheet" href="./plugins/OwlCarousel2-2.3.4/owl.carousel.min.css">
+    <link rel="stylesheet" href="./plugins/OwlCarousel2-2.3.4/owl.theme.default.min.css">
+
+    <!--____________________________________ links of css files ____________________________________-->
+
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/index.css">
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="./images/logo.png" class="img-fluid" alt="Home">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class=""><i class="fa-solid fa-sliders"></i></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                <ul class="navbar-nav me-0 mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link p-0 active" aria-current="page" href="#Home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link p-0" href="#AboutUs">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link p-0" href="#Services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link p-0" href="#WhyUs">Why Us?</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link p-0" href="#Language-Sectors">Language & Sectors</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link p-0" href="#ContactUs">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link p-0" href="#NewVendor">New Vendor!</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link p-0" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Login
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Vendor Login</a></li>
+                            <li><a class="dropdown-item" href="#">Client Login action</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header id="Home">
+        <div class="container vh-100 ">
+            <div class="row vh-100">
+                <div class="part1 col-md-6 wow animate__fadeInLeft" data-wow-duration="1.5s" >
+                    <div class="item">
+                        <h1 class="mb-0">L10N House</h1>
+                        <p class="my-4">will help you communicate your message</p>
+                        <h5 class="cd-headline clip is-full-width">
+                            <span class="cd-words-wrapper">
+                                <b class="is-visible">Eloquenty.</b>
+                                <b>Professionaly.</b>
+                                <b>Directly to your audience.</b>
+                            </span>
+                        </h5>
+                        <div class="video d-flex align-items-center">
+                            <a href="#Vido" class="me-3"><i class="fa-solid fa-play"></i></a>
+                            <span>Play Video</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="part2 col-md-6" >
+                    <div class="item">
+                        <img src="./images/imgHome.png" alt="earth" class=" wow animate__zoomIn" data-wow-duration="1.5s">
+                    </div>
+                </div>
+            </div>
+            <a href="#AboutUs" class="arrows">
+                <img src="./images/arrow-down.png" alt="arrow-down">
+                <img src="./images/arrow-down.png" alt="arrow-down">
+                <img src="./images/arrow-down.png" alt="arrow-down">
+            </a>
+            <div class="bg-svg"></div>
+        </div>
+        <div class="fixIedcon"><a href="#Home"><i class="fa-solid fa-arrow-up-long"></i></a></div>
+    </header>
+
+    <section id="AboutUs" class="py-5 ">
+        <div class="container">
+            <div class="title mb-5 wow animate__animated animate__heartBeat" data-wow-duration="1.5s">
+                <h2>ABOUT US</h2>
+            </div>
+            <div class="row py-4">
+                <div class="col-lg-5 part1">
+                    <div class="item">
+                        <img src="./images/about.png" class="img-fluid wow animate__zoomIn" data-wow-duration="1.5s" alt="man">
+                    </div>
+                </div>
+                <div class="col-lg-7 mt-3 mt-md-0 part2">
+                    <div class="item">
+                        <p class="wow animate__bounceIn" data-wow-duration="1.5s">
+                            Located in the heart of dynamic Egypt, <span class="fw-semibold"><span
+                                    class="firstColor">L10N</span><span class="secondColor"> House</span></span> is a
+                            fast-growing company fully equipped to fulfil your translation and localization
+                            requirements, whatever the size and scope of your project.
+                            Our personalized approach that reflects our passion and uncompromising commitment to every
+                            client has seen us enjoy constant
+                            and steady growth. We pride ourselves on our reputation for QUALITY, DEPENDABILITY, SPEED,
+                            and CONFIDENTIALITY – ensuring we deliver
+                            first-rate projects on time and on budget, every time. Our reputation is built on delivering
+                            reliable, accurate projects on time and on budget. Our 24/7 customer service allows us to
+                            solve your problems in real time with a fast turn-around.
+                            <span class="fw-semibold"><span class="firstColor">L10N</span><span class="secondColor">
+                                    House</span></span> takes the stress out of the language
+                            translation and localization process by providing fast, high-quality service for every piece
+                            of communication you need translated – in any language, for any type of content.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="Services" class="pt-5">
+        <div class="container">
+            <div class="title mb-5 wow animate__animated animate__heartBeat" data-wow-duration="1.5s">
+                <h2>SERVICES</h2>
+            </div>
+            <div class="row row-gap-5">
+
+            </div>
+        </div>
+    </section>
+
+    <section id="Video" class="py-5">
+        <div class="container">
+            <div class="title text-light mb-5 wow animate__animated animate__heartBeat" data-wow-duration="1.5s">
+                <h2>WATCH VIDEO</h2>
+            </div>
+            <div class="icon ">
+                <i class="fa-brands fa-youtube wow animate__zoomIn" data-wow-duration="1.5s" onclick="openPopup('video')"></i>
+            </div>
+        </div>
+    </section>
+
+    <section id="WhyUs" class="py-5">
+        <div class="title mb-5 wow animate__animated animate__heartBeat" data-wow-duration="1.5s">
+            <h2>WHY US?</h2>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-lg-4 mb-3 mb-lg-0 d-flex justify-content-center align-items-center wow animate__flipInY" data-wow-duration="1.5s" >
+                    <div class="item  part part1">
+                        <div class="img">
+                            <div class="content m-3">
+                                <h3>The Best</h3>
+                                <p class="mt-3 mb-0">At <span class="fw-semibold">
+                                        <spa class="firstColor">L10N
+                                    </span><span class="secondColor"> House</span></span>, each employee strives to
+                                    embrace our core values of QUALITY, DEPENDABILITY, SPEED, and CONFIDENTIALITY. These
+                                    values are reflected in every service we provide, whether large or small.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 mb-3 mb-lg-0 d-flex justify-content-center align-items-center wow animate__flipInY" data-wow-duration="1.5s" data-wow-delay=".2s">
+                    <div class="item  part part2">
+                        <div class="img">
+                            <div class="content m-3">
+                                <h3>Solutions for all your language challenges</h3>
+                                <p class="mt-3 mb-0">
+                                    Managing the multilingual content that gives a voice to your global strategy and
+                                    brand is accompanied by many challenges – from the creation of con
+                                    tent and its translation into many languages, to electronic publishing and printing
+                                    across many formats. <span class="fw-semibold">
+                                        <spa class="firstColor">L10N
+                                    </span><span class="secondColor"> House</span></span> is your one stop solution to
+                                    overcoming all these problems professionally and cost-effectively.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 col-lg-4 d-flex justify-content-center align-items-center wow animate__flipInY" data-wow-duration="1.5s" data-wow-delay=".4s">
+                    <div class="item part part3">
+                        <div class="img">
+                            <div class="content m-3">
+                                <h3>Our highly qualified teams</h3>
+                                <p class="mt-3 mb-0">At <span class="fw-semibold">
+                                        <spa class="firstColor">L10N
+                                    </span><span class="secondColor"> House</span></span>,understands your business.
+                                    Your own assigned linguists, project manager and account manager are dedicated to
+                                    provide outstanding service and deliver your project on schedule, within your budget
+                                    & according to your own specifications. </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="Language-Sectors">
+        <div class="part1 py-5">
+            <div class="container">
+                <div class="title text-light mb-5 mt-3 wow animate__animated animate__heartBeat" data-wow-duration="1.5s">
+                    <h2>Language & Sectors</h2>
+                </div>
+                <div class="buttons mb-3">
+                    <button class=" px-3 py-2 me-3 wow animate__zoomInLeft" data-wow-duration="1.5s"  onclick="openPopup('sectors')">Sectors</button>
+                    <button class=" px-3 py-2 wow animate__zoomInRight" data-wow-duration="1.5s" onclick="openPopup('language')">Languages</button>
+                </div>
+            </div>
+        </div>
+        <div class="part2 py-5">
+            <div class="container">
+                <div class="title text-light mb-5 wow animate__animated animate__heartBeat" data-wow-duration="1.5s">
+                    <h2>SATISFIED CLIENTS</h2>
+                </div>
+                <div class="content">
+                    <div class="owl-carousel">
+                        <div> <img src="./images/clients/ab.jpg" alt=""> </div>
+                        <div> <img src="./images/clients/amazon.png" alt=""> </div>
+                        <div> <img src="./images/clients/dell.png" alt=""> </div>
+                        <div> <img src="./images/clients/discovery.png" alt=""> </div>
+                        <div> <img src="./images/clients/hotel.png" alt=""> </div>
+                        <div> <img src="./images/clients/kia.png" alt=""> </div>
+                        <div> <img src="./images/clients/olympus.jpg" alt=""> </div>
+                        <div> <img src="./images/clients/pwc.png" alt=""> </div>
+                        <div> <img src="./images/clients/Siem.png" alt=""> </div>
+                        <div> <img src="./images/clients/tom.png" alt=""> </div>
+                        <div> <img src="./images/clients/wd.jpg" alt=""> </div>
+                        <div> <img src="./images/clients/zebra.png" alt=""> </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="ContactUs" class="py-5">
+        <div class="container">
+            <div class="title wow animate__animated animate__heartBeat " data-wow-duration="1.5s">
+                <h2>GET IN TOUCH</h2>
+            </div>
+            <p class="m-0 mt-4 mb-5 text-center text-light wow animate__bounceIn" data-wow-duration="1.5s">For More information, please do not hesitate to contact us.</p>
+            <div class="row ">
+                <div class="col-md-6">
+                    <div class="item wow animate__bounceInLeft" data-wow-duration="1.5s">
+                        <form class="p-4">
+                            <div class="group">
+                                <div class=" formInput mb-3">
+                                    <input type="text" name="name" class="form-control" id="Name"
+                                        required placeholder="Full Name*">
+                                </div>
+                                <div class="mb-3 formInput">
+                                    <input type="email" name="email" class="form-control" id="Email"
+                                        required placeholder="Email Address*">
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <input type="text" name="phone" class="form-control" id="Phone"
+                                    required placeholder="Phone Number*">
+                            </div>
+                            <div class="mb-3">
+                                <textarea name="message" class="form-control" id="Message"
+                                    required placeholder="Your Message..."></textarea>
+                            </div>
+                            <button class="btn text-light py-2 px-3">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-6 mt-4 mt-md-0">
+                    <div class="item wow animate__bounceInRight" data-wow-duration="1.5s">
+                        <div class="box p-4">
+                            <div class="icon">
+                                <div class="row mb-4">
+                                    <div class="col-2">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                    </div>
+                                    <div class="col-10">
+                                        <h4>Address</h4>
+                                        <p>178 Sameh Gado St. 6th October City, Giza, Egypt.</p>
+                                    </div>
+                                </div>
+                                <div class="row mb-4">
+                                    <div class="col-2">
+                                        <i class="fas fa-phone-alt"></i>
+                                    </div>
+                                    <div class="col-10">
+                                        <h4>Phone</h4>
+                                        <p>(+202) 3825 0102 | (+202) 3825 0105</p>
+                                    </div>
+                                </div>
+                                <div class="row mb-4">
+                                    <div class="col-2">
+                                        <i class="fas fa-envelope"></i>
+                                    </div>
+                                    <div class="col-10">
+                                        <h4>E-mail</h4>
+                                        <p>info@l10nhouse.com</p>
+                                    </div>
+                                </div>
+                                <ul class="list-unstyled">
+                                    <li><i class="fab fa-facebook-f"></i></li>
+                                    <li><i class="fab fa-instagram"></i></li>
+                                    <li><i class="fab fa-youtube"></i></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p class="text-center" > © 2021 <span>SemiCode</span>, Ltd. | All Rights Reserved .</p>
+    </footer>
+
+    <div class="popup" data-popup-name="service" onclick="closePopup()">
+        <div class="box p-3 pt-0">
+
+        </div>
+    </div>
+
+    <div class="popup" data-popup-name="video" onclick="closePopup()">
+        <div class="container h-100 d-flex justify-content-center align-items-center">
+            <div class="box p-3 pt-0 d-flex justify-content-center align-items-center">
+                <iframe src="https://www.youtube.com/embed/BMLRFrmRbKQ" title="Motion Graphics | Mister translation 
+            site" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;
+             picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup" data-popup-name="sectors" onclick="closePopup()">
+        <div class="box p-4 pt-0">
+            <div class="part1 py-2">
+                <h6>Sectors</h6>
+                <i class="fa-regular fa-circle-xmark" onclick="closePopup()"></i>
+            </div>
+            <div class="part2">
+                <div class="container">
+                    <div class="row mt-4">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup" data-popup-name="language" onclick="closePopup('language')">
+        <div class="box p-4 pt-0">
+            <div class="part1 py-2">
+                <i class="fa-regular fa-circle-xmark" onclick="closePopup('language')"></i>
+            </div>
+            <div class="part2">
+                <div class="container">
+                    <div class="body">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup loadingPage" data-popup-name="loading">
+        <div class="box p-3 pt-0">
+            <div class="img">
+                <img src="./images/logo.png" alt="">
+            </div>
+            <div class="content">
+                <span data-character="L" class="">L</span>
+                <span data-character="1" class="num">1</span>
+                <span data-character="0" class="num">0</span>
+                <span data-character="N">N</span>
+                <span data-character="H">H</span>
+                <span data-character="o">o</span>
+                <span data-character="u">u</span>
+                <span data-character="s">s</span>
+                <span data-character="e">e</span>
+            </div>
+        </div>
+    </div>
+
+
+    <!--____________________________________ links of js ____________________________________-->
+
+    <script src="./js/bootstrap.js"></script>
+    <!-- <script src="./js/jQuery.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="./plugins/animate_text/main.js"></script>
+    <script src="./plugins/OwlCarousel2-2.3.4/owl.carousel.min.js"></script>
+    <script src="./plugins/wow/wow.js"></script>
+    <script src="./js/runPlugins.js"></script>
+    <script src="./js/functions.js"></script>
+    <script src="./js/index.js"></script>
+
+</body>
+
+</html>

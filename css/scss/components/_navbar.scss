@@ -1,0 +1,123 @@
+@use "./../abstracts/index" as *;
+
+nav.navbar{
+    transition-duration: .5s;
+    &.scrolled{
+        background-color: rgba(255,255,255);
+        .navbar-brand{
+            width: 8%;
+        }
+    }
+    @include position($p:fixed, $t:0%, $l:0%);
+    width: 100%;
+    z-index: 100;
+    .navbar-brand{
+        width: 12%;
+        transition-duration: .5s;
+    }
+    .navbar-collapse {
+        ul{
+            li{
+                padding: .5rem;
+                a.nav-link{
+                    text-decoration: none;
+                    color: $firstColor;
+                    position: relative;
+                    @include font(18px);
+                    &::after{
+                        content: "";
+                        @include position( $b:-10px, $l:50%);
+                        @include eleDimensions($w:0%,$h:3px);
+                        background-color: $secondColor;
+                        border-radius: 5px;
+                        transition-duration: .5s;
+                         
+                    }
+                    &:hover::after,
+                    &.active::after{
+                        width: 100%;
+                        transform: translate(-50%,-50%);
+                    }
+                        
+                }
+            }
+        } 
+    }
+
+    // ___________________ responsive ___________________
+
+        @include responsive(350){
+            &.scrolled{
+                background-color: rgba(255,255,255);
+                .navbar-brand{
+                    width: 25%;
+                }
+            }
+            .navbar-brand{
+                width: 30%;
+            }
+            button.navbar-toggler{
+                border: 1.5px solid $firstColor;
+                border-radius: 5px;
+                color:$firstColor;
+                padding: .5rem .75rem ;
+                font-size: 20px;
+                @include flex();
+                &:focus{
+                    box-shadow: none;
+                }
+            }
+            .navbar-collapse{
+                margin-top: 5px;
+                background-color: aliceblue;
+                text-align: center;
+                border-radius: 10px;
+                box-shadow: #00000029 0 10px 36px, #0000000f 0 0 0 1px;
+            } 
+             
+        }
+
+        @include responsive(650){
+            &.scrolled{
+                background-color: rgba(255,255,255,0.9);
+                .navbar-brand{
+                    width: 18%;
+                }
+            }
+             .navbar-brand{
+                width: 20%;
+            }
+
+        }
+
+        @include responsive(1050){
+            &.scrolled{
+                background-color: rgba(255,255,255,0.9);
+                .navbar-brand{
+                    width: 14%;
+                }
+            }
+            .navbar-brand{
+                width: 15%;
+            }
+            button.navbar-toggler{
+                display: none;
+            }
+             .navbar-collapse{
+                margin-top: 0px;
+                background-color: transparent;
+                text-align: initial;
+                border-radius: 0px;
+                box-shadow:none;
+                ul{
+                    li{
+                        a.nav-link{
+                            font-size: 16px;
+                        }
+                    }
+                }
+            } 
+        }
+}
+
+ 

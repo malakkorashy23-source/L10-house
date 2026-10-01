@@ -1,0 +1,66 @@
+@use "./../abstracts/index" as *;
+
+
+#Video{
+    .title{
+        h2{             
+            @include responsive(350){
+                font-size: 30px;
+            }
+
+            @include responsive(650){
+                font-size: 40px;
+            }
+        }
+    }
+    background:url("./../images/video-bg.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    position: relative;
+    &::before{
+        content: "";
+        @include position($t:0%,$r:0px);
+        @include eleDimensions(100%,100%);
+        background:radial-gradient( #68b703, #305d00);
+        opacity: .8;
+    }
+    .container{
+        position: relative;
+        z-index: 2;
+        .title{
+            h2{             
+                color:#fff;            
+                &::after{  
+                    background-color: #fff;
+                }
+            }
+        }
+        .icon{
+            @include flex();
+            @include font(80px);
+            color:#fff; 
+            transition-duration: 1s;
+            transform: scale(.8);
+            cursor: pointer;
+            &:hover{
+                transform: scale(1.1);
+            }
+        }
+    }
+}
+
+.popup[data-popup-name="video"]{
+    .box{
+        margin:auto;
+        @include eleDimensions( 500px, 400px);
+        background:none;
+        overflow: hidden;
+        iframe{
+            @include eleDimensions(100%,100%);
+            border-radius: 10px;
+        }
+    }
+}

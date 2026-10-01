@@ -1,0 +1,86 @@
+@use "./../abstracts/index" as *;
+
+#WhyUs{
+    .item.part{
+        background-color:#ee5e00;
+        border-radius: 10px;
+        width: fit-content;
+        
+        .img{
+            @include eleDimensions(350px,450px);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: 10px;
+            position: relative;
+            transition-duration: .5s;
+            overflow:hidden;
+            &::before{
+                content: "";
+                @include eleDimensions( 100%,100%);
+                @include position($b:0,$l:0);
+                background: linear-gradient(0deg , #1e2022 0%, transparent 75%);
+            }
+            .content{
+                @include position($b:0,$l:0);
+                color:#fff;
+                
+                h3{
+                    font-weight: 700;
+                }
+            }
+
+            // ___________________ responsive ___________________
+
+                @include responsive(350){
+                    &{
+                        @include eleDimensions(280px,350px);
+                        .content{
+                            overflow-y: auto;
+                            height:230px;
+                            &::-webkit-scrollbar{
+                                width: 10px;
+                            }
+                            &::-webkit-scrollbar-button{
+                                display: none;
+                            }
+                            &::-webkit-scrollbar-track{
+                                background-color: transparent;
+                                border-radius: 10px;
+                            }
+                            &::-webkit-scrollbar-thumb{
+                                background-color: #ee5e00;
+                                border-radius: 10px;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+                     
+                
+        }
+        &:hover{
+            .img{
+                transform: translate(-10px,10px);
+            }
+        }
+        
+         
+    }
+    .part.part1{
+        .img{
+            background-image: url("./../images/best-ce.jpg");
+        }
+    }
+    .part.part2{
+        .img{
+            background-image: url("./../images/solutions.jpg");
+        }
+    }
+    .part.part3{
+        .img{
+            background-image: url("./../images/teamwork.jpg");
+        }
+    }
+     
+}

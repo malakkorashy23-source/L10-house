@@ -1,0 +1,21 @@
+@use "./../abstracts/" as*;
+
+#AboutUs{
+    background-color: #fff;
+    .part1{
+        img{
+            border-radius: 10px;
+        }
+    }
+    .part2{
+        p{
+            color: #555;
+            span{
+                font: {
+                    size:16px;
+                    weight:500;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,191 @@
+@use "./../abstracts/index" as *;
+
+header{
+    position:relative;
+    .part1{
+        @include flex($jc:flex-start);
+        h1{
+            color: $firstColor;
+            letter-spacing: 2px;
+            font-size: 65px;
+        }
+
+        h5.cd-headline.clip{
+            color: $secondColor;
+            font: {
+                size:20px;
+                weight: 400;
+            }
+            span.cd-words-wrapper{
+                &::after{
+                    background-color:$secondColor;
+                }
+            }
+        }
+        
+        .video{
+            a{
+                @include eleDimensions( 40px, 40px);
+                @include flex();
+                border-radius: 50%;   
+                text-decoration: none;
+                position: relative;
+                color: $firstColor;
+                i{
+                    position: relative;
+                    z-index: 3;
+                    transition-duration: .5s;
+                }
+                &::after{
+                    content: "";
+                    @include eleDimensions( 100%, 100%);
+                    @include position($t:0%,$l:0%);
+                    z-index: 2;
+                    border-radius: 50%;
+                    scale: 0;
+                    transition-duration: .5s;
+                }
+                &:hover{
+                    color:#fff;
+                    &::after{
+                    scale: 1;
+                    background-color: $firstColor;
+                    }
+                }
+            }
+        }
+
+    }
+
+    .part2{
+        @include flex();
+        img{
+            width: 400px;
+            animation: earth 1s linear infinite  alternate ;
+        }
+    }
+
+    .arrows{
+        cursor: pointer;
+        text-decoration: none;
+        @include position($b:9%,$l:50%);
+        @include eleDimensions(25px,25px);
+        transform: translate(-50%,-50%);
+        z-index: 3;
+        img{
+            @include eleDimensions(25px,25px);
+            @include position($t:0%,$l:0%);
+        }
+        @for $i from 1 through 3{
+            img:nth-of-type(#{$i}){
+                animation: arrow_#{$i} 2s  linear infinite;
+            }
+        }
+    }
+
+    .bg-svg{
+        background-image: url("../images/wavesOpacity.svg");
+        @include position($b:0%,$l:0%);
+        @include eleDimensions($h:20%);
+        z-index: 2;
+        transform: rotateX(180deg) rotateY(180deg);
+    }
+
+    // ___________________ responsive ___________________
+
+        @include responsive(350){
+            .part1{
+                @include flex($jc:flex-start,$ai:flex-end);
+
+                h1{
+                    font-size: 40px;
+                }
+
+                p{
+                    font-size: 14px;
+                }
+
+                h5.cd-headline.clip{
+                    font: {
+                        size:18px;
+                        weight: 400;
+                    }
+                }
+            }
+            .part2{
+                img{
+                    width: 240px;
+                    max-width: 300px;
+                }
+            }
+            .bg-svg{
+                @include eleDimensions($h:10%);
+            }
+            .arrows{
+                @include position($b:6%,$l:50%);
+                @include eleDimensions(20px,20px);
+                
+                img{
+                    @include eleDimensions(20px,20px);
+                }
+            }
+        }
+
+        @include responsive(450){
+            .part1{
+                h1{
+                    font-size: 50px;
+                }
+
+                p{
+                    font-size: 16px;
+                }
+            }
+        }
+
+        @include responsive(650){
+             
+            .part2{
+                img{
+                    width: 300px;
+                    
+                }
+            }
+            .bg-svg{
+                @include eleDimensions($h:15%);
+            }
+            .arrows{
+                @include position($b:9%,$l:50%);
+                @include eleDimensions(25px,25px);
+                
+                img{
+                    @include eleDimensions(25px,25px);
+                }
+            }
+        }
+        
+        @include responsive(850){
+            .part1{
+                @include flex($jc:flex-start);
+            }
+        }
+
+    .fixIedcon{
+        backGround-color:$firstColor;
+        padding:5px;
+        border-radius:5px 0px 0px 5px;
+        z-index:100;
+        width:fit-content;
+        cursor:pointer;
+        @include position($p:fixed,$b:50%,$r:0%);
+        transform: translateX(100%);
+        transition-duration: .5s;
+        &.show{
+            transform: translateX(0%);
+        }
+        a{
+            text-decoration:none;
+            color: #fff;
+        }
+    }
+}

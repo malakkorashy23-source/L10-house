@@ -1,0 +1,203 @@
+@use "./../abstracts/index" as *;
+
+#Language-Sectors{
+    .part1{
+        background:url("./../images/youth.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        width: 100%;
+        position: relative;
+        &::before{
+            content: "";
+            @include position($t:0%,$r:0px);
+            @include eleDimensions(100%,100%);
+            background:radial-gradient( #68b703, #305d00);
+            opacity: .8;
+        }
+        .container{
+            position: relative;
+            .title{
+                h2{             
+                    color:#fff;            
+                    &::after{  
+                        background-color: #fff;
+                    }
+                    @include responsive(350){
+                        font-size: 30px;
+                    }
+
+                    @include responsive(650){
+                        font-size: 40px;
+                    }
+                }
+            }
+            .buttons{
+                @include flex();
+                button{
+                    perspective: 200px;
+                    background-color: #fff;
+                    color:$secondColor;
+                    transition-duration: .5s;
+                    border-radius: 15px;
+                    border: 1px solid transparent;
+                    &:hover {
+                        border:1px solid $secondColor;
+                        transform: translateY(-5px);
+                    }
+                     
+                }
+            }
+        }
+
+    }
+    .part2{
+        .title{
+                h2{             
+                    @include responsive(350){
+                        font-size: 30px;
+                    }
+
+                    @include responsive(650){
+                        font-size: 40px;
+                    }
+                }
+            }
+        .content{
+            .owl-carousel .owl-item  img{
+                width: 75%;
+                margin: auto;
+            }
+            .owl-dots{
+                width: fit-content;
+                margin: auto;
+                button{
+                    @include eleDimensions(12px,12px);
+                    border-radius: 10px;
+                    background-color:rgb(238, 94, 0,.5);
+                    margin-right: 10px;
+                    &:focus,
+                    &.active{
+                        background-color:rgb(238, 94, 0);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.popup[data-popup-name="sectors"]{
+    .box{
+        .part2{
+            .row{
+                row-gap: 16px;
+                @include responsive(350){
+                            & .part{
+                                max-width: 300px;
+                                margin: auto;
+                            }
+                        }
+
+                        @include responsive(650){
+                        }
+                .item{
+                    background-color: #ebfbee;
+                    border-radius: 10px;
+                    padding: 10px;
+                    
+                    .product{
+                        text-align: center;
+                        img{
+                            @include eleDimensions(70px,70px);
+                            margin-bottom: 10px;
+                        }
+                        p{
+                            background-color: #dfeee2;
+                            color: #000;
+                            font-size: 13px;
+                            overflow-x: auto;
+                        }
+                         
+                    }
+                }
+            }
+        }
+    }
+}
+
+.popup[data-popup-name="language"]{
+    overflow-x: hidden;
+    .box{
+        width: 30%;
+        margin: auto;
+        @include position($t:0,$r:0);
+        border-radius: 10px 0px 0px 10px;
+        transform: translate(100%);
+        transition-duration: .5s;
+        &.show{
+            transform: translate(0%);
+        }
+        .part1{
+            border:none;
+        }
+         
+        .body{
+            .item:nth-of-type(odd){
+                h5{
+                    color:$firstColor;
+                    position: relative;
+                    width: fit-content;
+                    &::after{
+                        content: "";
+                        @include position( $b:-10px, $l:0%);
+                        @include eleDimensions($w:80%,$h:3px);
+                        background-color: $firstColor;
+                        border-radius: 5px;
+                    }
+                }
+                ul {
+                    margin-top: 20px;
+                    li i{
+                        color:$firstColor ;
+                    }
+                }
+            }
+            .item:nth-of-type(even){
+                h5{
+                    color:$secondColor;
+                    position: relative;
+                    width: fit-content;
+                    &::after{
+                        content: "";
+                        @include position( $b:-10px, $l:0%);
+                        @include eleDimensions($w:80%,$h:3px);
+                        background-color: $secondColor;
+                        border-radius: 5px;
+                    }
+                }
+                ul {
+                    margin-top: 20px;
+                    li i{
+                        color:$secondColor ;
+                    }
+                }
+            }
+        }
+
+        // ___________________ responsive ___________________
+
+        @include responsive(350){
+            &{
+                width: 90%;
+            }
+        }
+
+        @include responsive(650){
+            &{
+                width: 50%;
+            } 
+
+        }
+    }
+}

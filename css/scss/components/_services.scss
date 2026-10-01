@@ -1,0 +1,160 @@
+@use "./../abstracts/index" as *;
+
+#Services{
+    .item{
+        overflow: hidden;
+        transition-duration: 1s;
+        width: 80%;
+        border-radius: 15px;
+        .content{
+            width: 90%;
+            margin: auto;
+            margin-top: 16px;
+            img{
+                @include eleDimensions(60px,60px);
+            }
+            p{
+                color: #555;
+            }
+            span.read{
+                @include font();
+            }
+             
+        }
+        &:hover .content span.read{
+            animation:  text .5s linear infinite  alternate ;
+            @include font($w:500);
+            cursor: pointer;
+        }
+        &:hover{
+            background-color: #fff;
+            transform: translateY(-10px);
+            box-shadow: rgba(0, 0, 0, 0.5) 0px 20px 50px;
+        }
+    }
+
+     
+    // ___________________ responsive ___________________
+
+        @include responsive(350){
+              .item{
+                max-width: 400px;
+                .content{
+                    h4{
+                        @include font(18px);
+                    }
+                }
+              }
+        }
+
+        @include responsive(650){
+             
+        }
+
+        @include responsive(1050){
+             
+        }
+}
+
+.popup[data-popup-name="service"]{
+    .box{
+        .part2{
+            h3{
+                text-shadow:0px 1px  #000;
+                @include responsive(350){
+                    font-size: 16px;
+                }
+            }
+            .body{
+                    
+                .img{
+                    @include eleDimensions(60%,400px);
+                    transition-duration: .5s;
+                    position: relative;
+                    overflow: hidden;
+                    border-radius: 10px;     
+                    margin: auto;
+                    img{
+                        @include eleDimensions(100%,100%);
+                    }
+                    .layout{
+                        @include position($t:100%,$r:0px);
+                        @include eleDimensions(100%,100%);
+                        background-color: rgba( 0, 0, 0,.8);
+                        transition-duration: .5s;
+                        transition-delay: .5s;
+                        
+                        @include responsive(350){
+                            &{ 
+                                overflow-y: auto;
+                            }
+                        }
+                        p{
+                            @include position($b:0%,$l:-100%);
+                            z-index: 3;
+                            width: 80%;
+                            color:#ccc;
+                            transition-duration: 1s;
+                        }
+                    }
+            
+                    // ___________________ responsive ___________________
+
+                        @include responsive(350){
+                            &{
+                                @include eleDimensions(100%,300px);
+                            }
+                        }
+                        @include responsive(650){
+                            &{
+                                @include eleDimensions(80%,300px);
+                            }
+                        }
+                }
+                    
+                &:hover{
+                    .img{
+                        transform: scale(1.04);
+                        .layout{
+                        @include position($t:0%,$r:0px);
+                        p{
+                            transition-delay: 1s;
+                            @include position($b:0%,$l:10px);
+                            @include responsive(350){
+                                &{
+                                    position:relative;
+                                    margin-top: 10px;
+                                }
+                            }
+                        }
+                    }
+                    }
+                        
+                }
+
+            }
+
+        }
+        .part3{
+            .body{
+
+                ol{
+                    li{
+                        margin-bottom: 5px;
+                        &::marker{
+                            color: $secondColor;
+                            @include font(18px,500);
+                        }
+                        background-color: rgba(238, 94, 0,.3);;
+                        border-radius: 10px;
+                        padding: 5px;
+                        width: fit-content;
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+ 
